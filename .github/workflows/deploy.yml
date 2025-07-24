@@ -37,3 +37,4 @@ jobs:
             pm2 reload redzen-ascension || pm2 start ~/redzen-digital-ascension/start-ascension.sh --name redzen-ascension
             pm2 save
           EOF
+ 
