@@ -51,8 +51,8 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-matrix-glow/10 text-center text-sm text-muted-foreground slide-in-bottom">
           <p>
-            © 2024 <a href="https://danielimad.com" target="_blank" rel="noopener noreferrer" className="hover:text-matrix-glow transition-colors">RedZen Cloud Solutions</a>. 
-            <span className="text-matrix-glow"> Engineered for the future.</span>
+            © 2025 <a href="https://danielimad.com" target="_blank" rel="noopener noreferrer" className="hover:text-matrix-glow transition-colors">RedZen Cloud Solutions</a>. 
+            <a href="https://danielimad.com" target="_blank" rel="noopener noreferrer" className="text-matrix-glow hover:text-matrix-glow/80 transition-colors"> Engineered for the future.</a>
           </p>
         </div>
       </div>
