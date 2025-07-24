@@ -1,0 +1,39 @@
+name: Deploy Redzen Digital Ascension
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.LIGHTSAIL_KEY }}" > ~/.ssh/lightsail_key
+          chmod 600 ~/.ssh/lightsail_key
+          cat << 'EOF' >> ~/.ssh/config
+          Host lightsail
+            HostName ${{ secrets.LIGHTSAIL_HOST }}
+            User ${{ secrets.LIGHTSAIL_USER }}
+            IdentityFile ~/.ssh/lightsail_key
+            StrictHostKeyChecking no
+          EOF
+
+      - name: Build & Deploy to Lightsail
+        run: |
+          ssh lightsail << 'EOF'
+            set -e
+            cd ~/redzen-digital-ascension
+            git fetch origin main
+            git reset --hard origin/main
+            npm ci --quiet
+            npm run build
+            pm2 reload redzen-ascension || pm2 start ~/redzen-digital-ascension/start-ascension.sh --name redzen-ascension
+            pm2 save
+          EOF
