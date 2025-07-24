@@ -1,9 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail, Terminal } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="py-16 border-t border-matrix-glow/20 relative">
+  return <footer className="py-16 border-t border-matrix-glow/20 relative">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="slide-in-left">
@@ -15,11 +13,11 @@ const Footer = () => {
               cloud infrastructure with cutting-edge automation and intelligence.
             </p>
             <div className="flex gap-4">
-              <Button variant="neon" size="lg" onClick={() => window.location.href = 'mailto:contact@danielimad.com'}>
+              <Button variant="neon" size="lg">
                 <Mail className="h-4 w-4 mr-2" />
                 Get Started
               </Button>
-              <Button variant="glass" size="lg" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <Button variant="glass" size="lg">
                 <Terminal className="h-4 w-4 mr-2" />
                 Documentation
               </Button>
@@ -28,21 +26,21 @@ const Footer = () => {
           
           <div className="slide-in-right">
             <div className="glass-morphism p-8 rounded-2xl">
-              <h4 className="text-xl font-semibold mb-6 text-matrix-glow">
-                Connect with RedZen
-              </h4>
+              <h4 className="text-xl font-semibold mb-6 text-matrix-glow">Connect with RedZen Founder</h4>
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-muted-foreground hover:text-matrix-glow transition-colors">
                   <Github className="h-5 w-5" />
-                  <span>github.com/redzen</span>
+                  <span>github.com/danielimad
+                </span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground hover:text-matrix-glow transition-colors">
                   <Linkedin className="h-5 w-5" />
-                  <span>linkedin.com/company/redzen</span>
+                  <span>linkedin.com/in/0xdanielimad
+                </span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground hover:text-matrix-glow transition-colors">
                   <Mail className="h-5 w-5" />
-                  <span>contact@redzen.cloud</span>
+                  <span>contact@danielimad.com</span>
                 </div>
               </div>
             </div>
@@ -51,13 +49,11 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-matrix-glow/10 text-center text-sm text-muted-foreground slide-in-bottom">
           <p>
-            © 2025 <a href="https://danielimad.com" target="_blank" rel="noopener noreferrer" className="hover:text-matrix-glow transition-colors">RedZen Cloud Solutions</a>. 
-            <a href="https://danielimad.com" target="_blank" rel="noopener noreferrer" className="text-matrix-glow hover:text-matrix-glow/80 transition-colors"> Engineered for the future.</a>
+            © 2024 RedZen Cloud Solutions. 
+            <span className="text-matrix-glow"> Engineered for the future.</span>
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
