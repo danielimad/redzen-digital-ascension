@@ -12,21 +12,24 @@ const Projects = () => {
       description: 'Intelligent automation platform powered by advanced machine learning algorithms. Streamlines complex workflows with predictive analytics and autonomous decision-making capabilities.',
       image: aiWizardImage,
       tech: ['OpenAI', 'AWS', 'n8n'],
-      delay: '0s'
+      delay: '0s',
+      url: 'https://ai.redzen.cloud'
     },
     {
       title: 'Streaming Platform',
       description: 'Next-generation media distribution system with real-time content delivery, adaptive bitrate streaming, and intelligent load balancing across global edge networks.',
       image: streamingPlatformImage,
       tech: ['AWS', 'Ubuntu', 'Make.com'],
-      delay: '0.2s'
+      delay: '0.2s',
+      url: 'https://tv.redzen.cloud'
     },
     {
       title: 'Social Media Platform',
       description: 'Scalable social networking infrastructure with advanced user engagement analytics, real-time communication systems, and intelligent content recommendation engines.',
       image: socialPlatformImage,
       tech: ['Bubble', 'GitHub', 'Framer'],
-      delay: '0.4s'
+      delay: '0.4s',
+      url: 'https://app.danielimad.com'
     }
   ];
 
@@ -80,6 +83,7 @@ const Projects = () => {
                 <Button 
                   variant="matrix" 
                   className="w-full group/btn"
+                  onClick={() => window.open(project.url, '_blank')}
                 >
                   <Play className="h-4 w-4 mr-2 group-hover/btn:translate-x-1 transition-transform" />
                   Launch Project

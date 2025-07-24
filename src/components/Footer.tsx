@@ -15,11 +15,11 @@ const Footer = () => {
               cloud infrastructure with cutting-edge automation and intelligence.
             </p>
             <div className="flex gap-4">
-              <Button variant="neon" size="lg">
+              <Button variant="neon" size="lg" onClick={() => window.location.href = 'mailto:contact@danielimad.com'}>
                 <Mail className="h-4 w-4 mr-2" />
                 Get Started
               </Button>
-              <Button variant="glass" size="lg">
+              <Button variant="glass" size="lg" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <Terminal className="h-4 w-4 mr-2" />
                 Documentation
               </Button>
@@ -51,7 +51,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-matrix-glow/10 text-center text-sm text-muted-foreground slide-in-bottom">
           <p>
-            © 2024 RedZen Cloud Solutions. 
+            © 2024 <a href="https://danielimad.com" target="_blank" rel="noopener noreferrer" className="hover:text-matrix-glow transition-colors">RedZen Cloud Solutions</a>. 
             <span className="text-matrix-glow"> Engineered for the future.</span>
           </p>
         </div>

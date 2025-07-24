@@ -7,6 +7,16 @@ const Hero = () => {
     nextSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToSolutions = () => {
+    const solutionsSection = document.getElementById('solutions');
+    solutionsSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    projectsSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="container mx-auto px-6 text-center z-10">
@@ -23,10 +33,10 @@ const Hero = () => {
             <span className="text-matrix-glow">Transform your digital infrastructure.</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="neon" size="lg" className="font-semibold">
+            <Button variant="neon" size="lg" className="font-semibold" onClick={scrollToSolutions}>
               Explore Solutions
             </Button>
-            <Button variant="matrix" size="lg" className="font-semibold">
+            <Button variant="matrix" size="lg" className="font-semibold" onClick={scrollToProjects}>
               View Projects
             </Button>
           </div>
