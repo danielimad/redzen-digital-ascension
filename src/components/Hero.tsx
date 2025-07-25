@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center z-10">
         <div className="slide-in-bottom">
           <h1 className="sm:text-6xl md:text-8xl font-bold mb-4 md:mb-6 text-glow leading-tight text-6xl">
-            Red<span className="text-destructive">Zen</span>
+            Red Zen
           </h1>
           <div className="text-xl sm:text-2xl md:text-3xl mb-3 md:mb-4 text-matrix-fade">
             Cloud Solutions
